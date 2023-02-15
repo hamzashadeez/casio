@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/tailwind.js"></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+    <style>
+        .active{
+            background-color: #27491A80 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-white h-screen flex flex-row w-full">
+        <!-- side bar -->
+        <div class="hidden md:flex flex-col w-1/5 h-full bg-brand py-5">
+            <img src="../img/casio.svg" class="w-3/4 mx-auto" alt="" srcset="">
+            <div class="bg-whi h-full mt-3">
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 active flex flex-row px-5 items-center text-white">
+                        <img src="../img/home.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Home</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/profile.png" alt="" class="w-4 h-5" srcset="">
+                        <p class="px-5">My Profile</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/barge.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Top Winners</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/draw.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Upcoming Draw</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/award.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Privacy & Policy</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/terms.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Terms & Conditions</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/support.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Help & Support</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/setting2.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Settings</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                        <img src="../img/logout.png" alt="" class="w-5 h-5" srcset="">
+                        <p class="px-5">Signout</p>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4 mx-4 mt-8">
+                    <img src="../img/user.png" class="w-12 h-12" alt="" srcset="">
+                    <div >
+                        <h4 class="text-sm text-white">John Doe</h4>
+                        <p class="text-xs text-gray-200">example@email.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of side bar -->
+        <!-- main -->
+        <div class="w-full md:w-4/5 h-full relative">
+            <!-- header -->
+            <div class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
+                <img src="../img/casio.svg" alt="" class="w-40" srcset="">
+                <div class="flex items-center gap-4">
+                    <img src="../img/notification.png" class="w-8 h-8" alt="" srcset="">
+                    <img src="../img/hambergermenu.png" class="w-8 h-8" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <!-- end of main  -->
+    </div>
+</body>
+</html>

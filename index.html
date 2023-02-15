@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Casino</title>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body class="">
+    <div class="flex flex-col md:flex-row w-full h-screen">
+        <div class="w-2/6 bg-black hidden md:flex relative bg-[url('./img/dice.jpg')] bg-center bg-no-repeat bg-cover" >
+            <div class="absolute top-0 left-0 w-full h-full bg-green-900 opacity-25"></div>
+            <img src="./img/casio.svg" class="z-10 mx-auto w-1/2" alt="logo">
+            <p class="cursor-pointer text-sm my-2 text-white z-20 absolute bottom-10 w-full text-center">Have an account already? 
+                <a href="./pages/login.html" class="px-1 font-semibold text-brand cursor-pointer z-20">Log In</a>
+            </p>
+        </div>
+        <form id="form" class="w-full md:w-4/6 bg-white px-4 md:px-7 py-5">
+            <h1 class="font-semibold text-2xl text-brand my-3">Create an account</h1>
+            <p class="text-gray-400 text-xs w-4/5 mb-5">Join Casio Lucky Bet today to enjoy the best betting experience</p>
+            <label class="text-xs" for="fullname">Full Name</label>
+            <div class="bg-white h-10 flex items-center px-3 rounded-md  border mb-3 max-width-400">
+                <i class="fa-regular fa-user text-gray-500"></i>
+                <input id="fullname" required placeholder="John Doe" class="h-full px-2 text-sm flex-1" >
+            </div>
+            <!-- email input -->
+            <label class="text-xs" for="email">Email Address</label>
+            <div class="bg-white h-10 flex items-center px-3 rounded-md  border mb-3 max-width-400">
+                <i class="fa-regular fa-envelope text-gray-500"></i>
+                <input type="email" required placeholder="john@gmail.com" class="h-full px-2 text-sm flex-1" >
+            </div>
+            <!-- Phone Number -->
+            <label class="text-xs" for="phone">Phone Number</label>
+            <div class="bg-white h-10 flex items-center px-3 rounded-md  border mb-3 max-width-400">
+                <i class="fa-regular fa-user text-gray-500"></i>
+                <input id="phone" required placeholder="Phone Number" class="h-full px-2 text-sm flex-1">
+            </div>
+            <!-- password input -->
+            <label class="text-xs" for="password">Password</label>
+            <div class="bg-white h-10 flex items-center px-3 rounded-md  border mb-3 max-width-400">
+                <i class="fa-solid fa-lock text-gray-500"></i>
+                <input id="password" type="password" required placeholder="password" class="h-full px-2 text-sm flex-1" >
+            </div>
+            <!-- password input -->
+            <label class="text-xs" for="confirmpassword">Confirm Password</label>
+            <div class="bg-white h-10 flex items-center px-3 rounded-md  border mb-7 max-width-400">
+                <i class="fa-solid fa-lock text-gray-500"></i>
+                <input id="confirmpassword" type="password" required placeholder="confirm password" class="h-full px-2 text-sm flex-1" >
+            </div>
+            <button type="submit" class="bg-brand text-sm h-10 w-full max-width-400 rounded-full text-white">Register with us now</button>
+            <p class="text-xs my-2 md:hidden flex">Have an account already? <a href="./pages/login.html" class="px-1 font-semibold text-brand">Log In</a></p>
+            <!-- OR UI -->
+            <!-- <div class="flex items-center justify-center my-3 max-width-400"><hr> <p class="text-gray-500 text-xs">OR</p><hr></div> -->
+            <!-- Google Button -->
+
+
+        </form>
+    </div>
+    <script>
+        document.getElementById("form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            location.href = './pages/home.html';
+        })
+    </script>
+</body>
+</html>
