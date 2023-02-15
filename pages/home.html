@@ -16,7 +16,8 @@
         }
     </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
+    
     <div class="bg-white h-screen flex flex-row w-full">
         <!-- side bar -->
         <div class="hidden md:flex flex-col w-1/5 h-full bg-brand py-5">
@@ -89,13 +90,96 @@
         <!-- end of side bar -->
         <!-- main -->
         <div class="w-full md:w-4/5 h-full relative">
-            <!-- header -->
+            <!-- mobile header -->
             <div class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
                 <img src="../img/casio.svg" alt="" class="w-40" srcset="">
                 <div class="flex items-center gap-4">
                     <img src="../img/notification.png" class="w-8 h-8" alt="" srcset="">
                     <img src="../img/hambergermenu.png" class="w-8 h-8" alt="" srcset="">
                 </div>
+            </div>
+            <!-- end mobile header -->
+            <div class="flex w-full items-center justify-between px-3 md:px-5 my-3 md:my-6">
+                <h2 class="text-lg md:text-xl font-semibold ">Trending Games</h2>
+                <a href="#">
+                    <img src="../img/notification-o.png" class="hidden md:flex w-8 h-8" alt="bell" srcset="">
+                </a>
+            </div>
+            <!-- games -->
+            <div class="grid grid-cols-3 md:grid-cols-5 ga px-3 md:px-6">
+                <div class="flex flex-col w-28 md:w-36 h-40 rounded-md shadow-sm bg-white border mb-3 items-center justify-center p-2">
+                    <img src="../img/poke.svg" alt="" class="w-2/3 h-1/3" srcset="">
+                    <h5 class="font-semibold text-sm my-1">Poka Battle</h5>
+                    <a style="font-size: 10px;" href="#" class="bg-brand px-3 rounded py-1 text-white text-xs">Play Now</a>
+                    <p style="font-size: 10px;" class="text-gray-300 my-1 font-light">Next Draw</p>
+                    <p style="font-size: 10px;" class="text-black font-medium">08:02:24:04</p>
+                </div>
+                <div class="flex flex-col w-28 md:w-36 h-40 rounded-md shadow-sm bg-white border mb-3 items-center justify-center p-2">
+                    <img src="../img/poke2.svg" alt="" class="w-2/3 h-1/3" srcset="">
+                    <h5 class="font-semibold text-sm my-1">Poka Battle</h5>
+                    <a style="font-size: 10px;" href="#" class="bg-brand px-3 rounded py-1 text-white text-xs">Play Now</a>
+                    <p style="font-size: 10px;" class="text-gray-300 my-1 font-light">Next Draw</p>
+                    <p style="font-size: 10px;" class="text-black font-medium">08:02:24:04</p>
+                </div>
+                <div class="flex flex-col w-28 md:w-36 h-40 rounded-md shadow-sm bg-white border mb-3 items-center justify-center p-2">
+                    <img src="../img/poke.svg" alt="" class="w-2/3 h-1/3" srcset="">
+                    <h5 class="font-semibold text-sm my-1">Poka Battle</h5>
+                    <a style="font-size: 10px;" href="#" class="bg-brand px-3 rounded py-1 text-white text-xs">Play Now</a>
+                    <p style="font-size: 10px;" class="text-gray-300 my-1 font-light">Next Draw</p>
+                    <p style="font-size: 10px;" class="text-black font-medium">08:02:24:04</p>
+                </div>
+                <div class="flex flex-col w-28 md:w-36 h-40 rounded-md shadow-sm bg-white border mb-3 items-center justify-center p-2">
+                    <img src="../img/poke2.svg" alt="" class="w-2/3 h-1/3" srcset="">
+                    <h5 class="font-semibold text-sm my-1">Poka Battle</h5>
+                    <a style="font-size: 10px;" href="#" class="bg-brand px-3 rounded py-1 text-white text-xs">Play Now</a>
+                    <p style="font-size: 10px;" class="text-gray-300 my-1 font-light">Next Draw</p>
+                    <p style="font-size: 10px;" class="text-black font-medium">08:02:24:04</p>
+                </div>
+                <div class="flex flex-col w-28 md:w-36 h-40 rounded-md shadow-sm bg-white border mb-3 items-center justify-center p-2">
+                    <img src="../img/poke.svg" alt="" class="w-2/3 h-1/3" srcset="">
+                    <h5 class="font-semibold text-sm my-1">Poka Battle</h5>
+                    <a style="font-size: 10px;" href="#" class="bg-brand px-3 rounded py-1 text-white text-xs">Play Now</a>
+                    <p style="font-size: 10px;" class="text-gray-300 my-1 font-light">Next Draw</p>
+                    <p style="font-size: 10px;" class="text-black font-medium">08:02:24:04</p>
+                </div>
+                
+            </div>
+            <!-- end games -->
+
+            <!-- draws -->
+            <div class="px-3 md:px-5 mt-4 md:mt-10">
+                <h2 class="font-semibold text-lg md:text-xl mb-3">Latest Draws</h2>
+                <div class="flex flex-col md:flex-row gap-4 ">
+                    <img src="../img/Frame.svg" class="w-full md:w-1/4" alt="">
+                    <img src="../img/Frame.svg" class="w-full md:w-1/4" alt="">
+                    <img src="../img/Frame.svg" class="w-full md:w-1/4" alt="">
+                </div>
+            </div>
+            <!-- end draws -->
+            
+            <!-- winners -->
+            <div class="px-3 md:px-5 mt-4 md:mt-10 flex items-center justify-between">
+                <h2 class="font-semibold text-lg md:text-xl mb-3">Top Winners</h2>
+                <a class="text-brand text-sm font-semibold" href="#">View All</a>
+            </div>
+            <div class="flex items-center gap-5 px-3 md:px-5 mb-5">
+                <div>
+                    <img src="../img/1.png" class="w-14 h-14" alt="" srcset="">
+                    <p style="font-size: 10px;" class="text-center my-1 ">Jack Kallow</p>
+                </div>
+                <div>
+                    <img src="../img/2.png" class="w-14 h-14" alt="" srcset="">
+                    <p style="font-size: 10px;" class="text-center my-1 ">Jack Kallow</p>
+                </div>
+                <div>
+                    <img src="../img/3.png" class="w-14 h-14" alt="" srcset="">
+                    <p style="font-size: 10px;" class="text-center my-1 ">Jack Kallow</p>
+                </div>
+                <div>
+                    <img src="../img/4.png" class="w-14 h-14" alt="" srcset="">
+                    <p style="font-size: 10px;" class="text-center my-1 ">Jack Kallow</p>
+                </div>
+                <!-- <div class="flex"></div> -->
             </div>
         </div>
         <!-- end of main  -->
