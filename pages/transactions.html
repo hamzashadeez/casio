@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/tailwind.js"></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/tbl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <title>Transactions</title>
+    <style>
+        .active {
+            background-color: #27491A80 !important;
+        }
+
+        .cardbg {
+            background: rgba(187, 255, 163, 0.5);
+        }
+
+        .p10 {
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="bg-white  h-screen flex flex-row w-full">
+        <!-- side bar -->
+        <div class="hidden md:flex flex-col w-1/5 h-full bg-brand py-5">
+            <main class="w-full h-full sticky top-0 left-0">
+                <img src="../img/casio.svg" class="w-3/4 mx-auto" alt="" srcset="">
+                <div class="bg-whi h-full mt-3">
+                    <a href="./home.html">
+                        <div class="h-14 hover:bg-green-900  flex flex-row px-5 items-center text-white">
+                            <img src="../img/home.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Home</p>
+                        </div>
+                    </a>
+                    <a href="./profile.html">
+                        <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                            <img src="../img/profile.png" alt="" class="w-4 h-5" srcset="">
+                            <p class="px-5">My Profile</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                            <img src="../img/barge.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Top Winners</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="h-14 hover:bg-green-900 active flex flex-row px-5 items-center text-white">
+                            <img src="../img/draw.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Upcoming Draw</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                            <img src="../img/award.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Privacy & Policy</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                            <img src="../img/terms.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Terms & Conditions</p>
+                        </div>
+                    </a>
+                    <a href="./help_support.html">
+                        <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                            <img src="../img/support.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Help & Support</p>
+                        </div>
+                    </a>
+                    <a href="./settings.html">
+                        <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                            <img src="../img/setting2.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Settings</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                            <img src="../img/logout.png" alt="" class="w-5 h-5" srcset="">
+                            <p class="px-5">Signout</p>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-4 mx-4 mt-8">
+                        <img src="../img/user.png" class="w-12 h-12" alt="" srcset="">
+                        <div>
+                            <h4 class="text-sm text-white">John Doe</h4>
+                            <p class="text-xs text-gray-200">example@email.com</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- end of side bar -->
+        <!-- main -->
+        <div class="w-full md:w-4/5 h-full relative">
+            <!-- mobile header -->
+            <div
+                class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
+                <img src="../img/casio.svg" alt="" class="w-40" srcset="">
+                <div class="flex items-center gap-4">
+                    <a href="./notifications.html">
+                        <img src="../img/notification.png" class="w-8 h-8" alt="bell" srcset="">
+                    </a>
+                    <img src="../img/hambergermenu.png" class="w-8 h-8" alt="" srcset="">
+                </div>
+            </div>
+            <!-- end mobile header -->
+            <div
+                class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 hidden md:flex items-center justify-between">
+                <img src="../img/casio.svg" alt="" class="w-40" srcset="">
+                <div class="flex items-center gap-4 px-2">
+                    <a href="./uncoming-draw.html" class="text-sm cursor-pointer text-green-200 font-semibold">All
+                        Bets</a>
+                    <a href="./fund.html" class="text-sm cursor-pointer text-green-200 font-semibold">Fund Wallet</a>
+                    <a href="./withdraw.html" class="text-sm cursor-pointer text-green-200 font-semibold">Withdraw
+                        Funds</a>
+                    <a href="#"
+                        class="text-sm cursor-pointer text-white font-semibold">Transaction History</a>
+                </div>
+                <div class="flex items-center gap-4 px-2">
+                    <img src="../img/5.png" class="w-8 h-8" alt="" srcset="">
+                    <a href="./notifications.html">
+                        <img src="../img/notification.png" class="w-8 h-8" alt="bell" srcset="">
+                    </a>
+                </div>
+            </div>
+           <main class="px-2">
+            <div class="flex items-center justify-between px-3 md:px-6 my-4">
+                <h3 class="font-semibold text-lg">Transaction History</h3>
+                <input type="text" placeholder="Search..." class="h-8 px-3 rounded bg-gray-50 text-sm">
+            </div>
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <!-- table-striped w-100 -->
+                    <thead>
+                        <tr class="">
+                            <th scope="col">ID</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2023-02-10 14:06:03</td>
+                            <td>$120</td>
+                            <td>@Withdrawal</td>
+                            <td>#2928</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2023-02-10 14:06:03</td>
+                            <td>$120</td>
+                            <td>@Withdrawal</td>
+                            <td>#2928</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2023-02-10 14:06:03</td>
+                            <td>$120</td>
+                            <td>@Withdrawal</td>
+                            <td>#2928</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2023-02-10 14:06:03</td>
+                            <td>$120</td>
+                            <td>@Withdrawal</td>
+                            <td>#2928</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2023-02-10 14:06:03</td>
+                            <td>$120</td>
+                            <td>@Withdrawal</td>
+                            <td>#2928</td>
+                            <td>Completed</td>
+                        </tr>
+                
+                    </tbody>
+                </table>
+                <!-- end table -->
+
+            </div>
+           </main>
+        </div>
+    </div>
+    <!-- end of main  -->
+    </div>
+</body>
+
+</html>

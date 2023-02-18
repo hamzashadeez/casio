@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/tailwind.js"></script>
+    <link rel="stylesheet" href="../css/acc.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Help & Support</title>
+</head>
+
+<body>
+    <div class="h-screen bg-green-50 flex flex-col w-full items-center justify-center">
+        <div class="flex items-center w-full mx-5 md:w-1/4 md:mx-auto justify-between mb-3">
+            <a href="./home.html" class="flex items-center gap-2 text-gray-500 text-md">
+                <i class="fa-solid fa-chevron-left"></i>
+                <p>Home</p>
+            </a>
+            <h3 class="text-brand  font-semibold text-md">Help & Support</h3>
+        </div>
+        <main class="bg-white shadow-md rounded-md w-full mx-5 md:w-1/4 md:mx-auto h-5/6 overflow-y-auto px-4 py-3">
+           <h4 class="text-sm font-semibold mb-2 mt-1">How Can We Help You?</h4>
+           <a href="#">
+            <div class="flex items-center justify-between px-4 bg-green-50  h-10 rounded-full mb-1">
+                <p class="text-xs">My Account</p>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </div>
+           </a>
+           <a href="#">
+            <div class="flex items-center justify-between px-4 bg-green-50  h-10 rounded-full mb-1">
+                <p class="text-xs">My Lottery</p>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </div>
+           </a>
+           <a href="#">
+            <div class="flex items-center justify-between px-4 bg-green-50  h-10 rounded-full mb-1">
+                <p class="text-xs">Payment</p>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </div>
+           </a>
+           <a href="#">
+            <div class="flex items-center justify-between px-4 bg-green-50  h-10 rounded-full mb-1">
+                <p class="text-xs">Vouchers</p>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </div>
+           </a>
+           <a href="#">
+            <div class="flex items-center justify-between px-4 bg-green-50  h-10 rounded-full mb-1">
+                <p class="text-xs">My Support Request</p>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </div>
+           </a>
+
+           <!-- FAQ -->
+        <h4 class="text-sm font-semibold mb-2 mt-10 ">FAQ</h4>
+        <div class="container">
+            <button class="accordion text-sm rounded-full bg-green-50">01. What is Lottery?</button>
+            <div class="accordion-content">
+                <p class="text-xs">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quo eligendi! Deleniti, fugiat. Sunt, delectus.
+                </p>
+            </div>
+        
+            <button class="accordion text-sm rounded-full bg-green-50">02. How to choose Lottery Ticket</button>
+            <div class="accordion-content">
+                <p class="text-xs">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quo eligendi! Deleniti, fugiat. Sunt, delectus.
+                </p>
+            </div>
+        
+            <button class="accordion text-sm rounded-full bg-green-50">03. What is Jackpots?</button>
+            <div class="accordion-content">
+                <p class="text-xs">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero sed iusto odit eaque earum a porro aut culpa quas illum!
+                </p>
+            </div>
+        </div>
+        </main>
+    </div>
+
+    <script>
+
+            const accordionBtns = document.querySelectorAll(".accordion");
+
+            accordionBtns.forEach((accordion) => {
+                accordion.onclick = function () {
+                    this.classList.toggle("is-open");
+
+                    let content = this.nextElementSibling;
+                    console.log(content);
+
+                    if (content.style.maxHeight) {
+                        //this is if the accordion is open
+                        content.style.maxHeight = null;
+                    } else {
+                        //if the accordion is currently closed
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        console.log(content.style.maxHeight);
+                    }
+                };
+            });
+
+    </script>
+</body>
+
+</html>
