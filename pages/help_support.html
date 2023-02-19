@@ -13,16 +13,32 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Help & Support</title>
+    <script src="../js/mobile-sidebar.js"></script>
+
 </head>
 
 <body>
+    <div id="body"></div>
+    <!-- mobile header -->
+    <div class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
+        <button id="mecnu" onclick="render(document.getElementById(`body`))">
+            <img id="icon" src="../img/hambergermenu.png" class="w-8 h-8 z-50" alt="" srcset="">
+        </button>
+        <div class="flex items-center gap-4">
+            <img src="../img/casio.svg" alt="" class="w-40" srcset="">
+            <a href="./notifications.html">
+                <img src="../img/notification.png" class="w-8 h-8" alt="bell" srcset="">
+            </a>
+        </div>
+    </div>
+    <!-- end mobile header -->
     <div class="h-screen bg-green-50 flex flex-col w-full items-center justify-center">
-        <div class="flex items-center w-full mx-5 md:w-1/4 md:mx-auto justify-between mb-3">
-            <a href="./home.html" class="flex items-center gap-2 text-gray-500 text-md">
+        <div class="flex items-center w-full mx-5 md:w-1/4 md:mx-auto justify-center mb-3">
+            <!-- <a href="./home.html" class="flex items-center gap-2 text-gray-500 text-md">
                 <i class="fa-solid fa-chevron-left"></i>
                 <p>Home</p>
-            </a>
-            <h3 class="text-brand  font-semibold text-md">Help & Support</h3>
+            </a> -->
+            <h3 class="text-brand text-center font-semibold text-md">Help & Support</h3>
         </div>
         <main class="bg-white shadow-md rounded-md w-full mx-5 md:w-1/4 md:mx-auto h-5/6 overflow-y-auto px-4 py-3">
            <h4 class="text-sm font-semibold mb-2 mt-1">How Can We Help You?</h4>
