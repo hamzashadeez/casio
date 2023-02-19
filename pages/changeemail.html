@@ -102,14 +102,13 @@
         <!-- main -->
         <div class="w-full md:w-4/5 h-full relative">
             <!-- mobile header -->
-            <div
-                class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
-                <img src="../img/casio.svg" alt="" class="w-40" srcset="">
+            <div class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
+                <img src="../img/hambergermenu.png" class="w-8 h-8" alt="" srcset="">
                 <div class="flex items-center gap-4">
+                    <img src="../img/casio.svg" alt="" class="w-40" srcset="">
                     <a href="./notifications.html">
-                        <img src="../img/notification-o.png" class="w-8 h-8" alt="bell" srcset="">
+                        <img src="../img/notification.png" class="w-8 h-8" alt="bell" srcset="">
                     </a>
-                    <img src="../img/hambergermenu.png" class="w-8 h-8" alt="" srcset="">
                 </div>
             </div>
             <!-- end mobile header -->
@@ -126,7 +125,12 @@
             </div>
 
             <main class="px-3 md:px-5">
-                <h2 class=" my-3 md:my-4 text-lg md:text-2xl font-semibold text-center">Change Email</h2>
+                <div class="flex items-center justify-center">
+                    <a href="./settings.html">
+                        <i class="fa-regular fa-chevron-left px-3"></i>
+                    </a>
+                    <h2 class=" my-3 md:my-4 text-lg md:text-2xl font-semibold text-center">Change Email</h2>
+                </div>
                 <form class="bg-gray-50a rounded-md shadow-md p-3 py-6 max-width-400 mx-auto ">
                     <div>
                         <label class="text-xs" for="oldpassword">Old Email</label>
@@ -158,6 +162,10 @@
                     <button type="submit"
                         class="bg-brand mt-2 text-sm h-10 w-full max-width-400 rounded-full text-white mt-auto">Change
                         Email</button>
+                        <a href="./settings.html">
+
+                            <p class="px-5 h-10 text-sm pt-2.5 text-red-800 bg-red-50 rounded-full text-center mt-2 ">Cancel</p>
+                        </a>
                 </form>
             </main>
 
