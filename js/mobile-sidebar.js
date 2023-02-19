@@ -6,9 +6,9 @@ function render(container) {
   let html = "";
   if (display === "none") {
     document.getElementById("icon").src = "../img/close.png";
-    html = `<div class="transition ease-in duration-700 flex flex-row justify-between items-start md:hidden fixed top-14 bg-white h-5/6 w-full z-20">
-                 <div class="bg-brand w-2/3 h-screen flex flex-col">
-                 <img src="../img/casio.svg" class="w-44 mx-auto mt-1 mb-3" alt="">
+    html = `<div class="transition ease-in duration-700 flex flex-row justify-between items-start md:hidden fixed top-14 bg-transparent h-5/6 w-full z-20">
+                 <div class="bg-brand w-3/5 h-screen flex flex-col">
+                 <img src="../img/casio.svg" class="w-44 mx-4 mt-1 mb-3" alt="">
                      <a href="./home.html">
                          <div class="h-14 bg-brand shadow-sm mb-1  flex flex-row px-5 justify-start items-center text-white">
                              <img src="../img/home.png" alt="" class="w-5 h-5" srcset="">
