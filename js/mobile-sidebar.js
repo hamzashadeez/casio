@@ -64,6 +64,14 @@ function render(container) {
                              <p class="px-2">Sign Out</p>
                          </div>
                      </a>
+                    
+                     <div class="flex items-center gap-4 mx-4 mt-8">
+                        <img src="../img/user.png" class="w-12 h-12" alt="" srcset="">
+                        <div >
+                            <h4 class="text-sm text-white">John Doe</h4>
+                            <p class="text-xs text-gray-200">example@email.com</p>
+                        </div>
+                    </div>
          </div>
          </div>`;
     display = "true";
