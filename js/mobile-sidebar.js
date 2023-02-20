@@ -65,7 +65,7 @@ function render(container) {
                          </div>
                      </a>
                     
-                     <div class="flex items-center gap-4 mx-4 mt-8">
+                     <div class="flex items-center gap-4 mx-4 mt-4">
                         <img src="../img/user.png" class="w-12 h-12" alt="" srcset="">
                         <div >
                             <h4 class="text-sm text-white">John Doe</h4>
