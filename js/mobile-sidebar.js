@@ -5,7 +5,7 @@ function render(container) {
   container.innerHTML = "";
   let html = "";
   if (display === "none") {
-    document.getElementById("icon").src = "../img/close.png";
+    // document.getElementById("icon").src = "../img/close.png";
     html = `<div class="transition ease-in duration-700 flex flex-row justify-between items-start md:hidden fixed top-14 bg-transparent h-5/6 w-full z-20">
                  <div class="bg-brand w-3/5 h-screen flex flex-col">
                  <img src="../img/casio.svg" class="w-44 mx-4 mt-1 mb-3" alt="">
@@ -69,7 +69,7 @@ function render(container) {
     display = "true";
   } else {
     html = "";
-    document.getElementById("icon").src = "../img/hambergermenu.png";
+    // document.getElementById("icon").src = "../img/hambergermenu.png";
     display = "none";
   }
   container.innerHTML += html;
