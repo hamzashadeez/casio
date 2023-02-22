@@ -5,16 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/tailwind.js"></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../js/mobile-sidebar.js"></script>
     <title>Success</title>
 </head>
-<body class="flex  flex-col items-center justify-center bg-green-50 h-screen p-3">
-    <div class="bg-white relative p-3 rounded-md w-full mx-4 md:w-1/4 md:mx-auto flex flex-col items-center justify-center py-10 ">
-        <a href="../pages/uncoming-draw.html"><img src="../img/icons8-cancel-50.png" class="w-8 absolute right-1 -top-10" alt=""></a>
-        <h3 class="text-center font-semibold">Congratulation! You are a <br> Big Winner...</h3>
-        <div class="bg-green-100 m-4 flex items-center justify-center p-3 w-52 h-52 rounded-md">
-            <img src="../img/3943185-removebg-preview.png" class="w-full h-full m-2" alt="">
+<body class="bg-green-50 h-screen flex flex-row w-full">
+    <!-- side bar -->
+    <div id="body"></div>
+
+    <div class="hidden md:flex flex-col w-1/5 h-full bg-brand py-5">
+        <img src="../img/casio.svg" class="w-3/4 mx-auto" alt="" srcset="">
+        <div class="bg-whi h-full mt-3">
+            <a href="./home.html">
+                <div class="h-14 hover:bg-green-900  flex flex-row px-5 items-center text-white">
+                    <img src="../img/home.png" alt="" class="w-5 h-5" srcset="">
+                    <p class="px-5">Home</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="h-14 hover:bg-green-900 flex active flex-row px-5 items-center text-white">
+                    <img src="../img/profile.png" alt="" class="w-4 h-5" srcset="">
+                    <p class="px-5">My Profile</p>
+                </div>
+            </a>
+            <a href="./fund.html">
+                <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                    <img src="../img/icons8-wallet-50.png" alt="" class="w-5 h-5" srcset="">
+                    <p class="px-5">Fund Wallet</p>
+                </div>
+            </a>
+            <a href="./uncoming-draw.html">
+                <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                    <img src="../img/draw.png" alt="" class="w-5 h-5" srcset="">
+                    <p class="px-5">Upcoming Draw</p>
+                </div>
+            </a>
+            <a href="./withdraw.html">
+                <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                    <i class="fa-sharp fa-solid fa-money-bill-transfer"></i>
+                    <p class="px-5">Withdraw Funds</p>
+                </div>
+            </a>
+            <a href="./transactions.html">
+                <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                    <img src="../img/files.png" alt="" class="w-5 h-6" srcset="">
+                    <p class="px-5">Transactions History</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                    <img src="../img/barge.png" alt="" class="w-5 h-5" srcset="">
+                    <p class="px-5">Top Winners</p>
+                </div>
+            </a>
+            <a href="./settings.html">
+                <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                    <img src="../img/setting2.png" alt="" class="w-5 h-5" srcset="">
+                    <p class="px-5">Settings</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="h-14 hover:bg-green-900 flex flex-row px-5 items-center text-white">
+                    <img src="../img/logout.png" alt="" class="w-5 h-5" srcset="">
+                    <p class="px-5">Signout</p>
+                </div>
+            </a>
+    
+            <div class="flex items-center gap-4 mx-4 mt-8">
+                <img src="../img/user.png" class="w-12 h-12" alt="" srcset="">
+                <div>
+                    <h4 class="text-sm text-white">John Doe</h4>
+                    <p class="text-xs text-gray-200">example@email.com</p>
+                </div>
+            </div>
         </div>
-        <h3 class="text-center font-semibold mt-3">You Get $2500</h3>
     </div>
+    <!-- end of side bar -->
+    <main class="flex w-full md:w-4/5 h-full relative flex-col items-center justify-center bg-green-50 h-screen p-3">
+        <!-- mobile header -->
+        <div class="h-14 absolute top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
+            <button id="mecnu" onclick="render(document.getElementById(`body`))">
+                <img id="icon" src="../img/hambergermenu.png" class="w-8 h-8 z-50" alt="" srcset="">
+            </button>
+            <div class="flex items-center gap-4">
+                <img src="../img/casio.svg" alt="" class="w-40" srcset="">
+                <a href="./notifications.html">
+                    <img src="../img/notification.png" class="w-7 h-7" alt="bell" srcset="">
+                </a>
+            </div>
+        </div>
+        <!-- end mobile header -->
+        <div class="h-14 absolute top-0 left-0 shadow-md bg-brand w-full px-3 hidden md:flex items-center justify-between">
+            <a href="#" class="text-sm cursor-pointer text-white font-semibold">
+                Success</a>
+        
+            <div class="flex items-center gap-4 px-2">
+                <img src="../img/casio.svg" alt="" class="w-40" srcset="">
+                <a href="./notifications.html">
+                    <img src="../img/notification.png" class="w-8 h-8" alt="bell" srcset="">
+                </a>
+            </div>
+        </div>
+        <div class="bg-white relative p-3 rounded-md w-full mx-4 md:w-1/4 md:mx-auto flex flex-col items-center justify-center py-10 ">
+            <a href="../pages/uncoming-draw.html"><img src="../img/icons8-cancel-50.png" class="w-8 absolute right-1 -top-10" alt=""></a>
+            <h3 class="text-center font-semibold">Congratulation! You are a <br> Big Winner...</h3>
+            <div class="bg-green-100 m-4 flex items-center justify-center p-3 w-52 h-52 rounded-md">
+                <img src="../img/3943185-removebg-preview.png" class="w-full h-full m-2" alt="">
+            </div>
+            <h3 class="text-center font-semibold mt-3">You Get $2500</h3>
+        </div>
+    </main>
 </body>
 </html>
