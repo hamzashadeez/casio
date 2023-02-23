@@ -122,8 +122,11 @@
                 <h2 class="text-lg md:text-xl font-semibold ">My Profile</h2>
             </div>
             
-            <div class="p-3 md:p-5 flex items-center mb-4 ">
-                <img src="../img/5.png" alt="profile" class="w-30 h-30" srcset="">
+            <div onclick="choosePic()" class="p-3 cursor-pointer max-width-400  md:p-5 flex items-center mt-10 mb-4 ">
+                <!-- class="w-30 h-30" -->
+                <img style="width: 100px;height: 100px; border-radius: 50%;" src="../img/5.png" id="dp" alt="profile"  srcset="">
+                <!-- get the selected picture from this input below -->
+                <input type="file" name="profile_pic" id="profile_pic" class="hidden" onchange="onFileSelected(event)">
                 <div class="px-3">
                     <h4 class="font-semibold text-lg mb-1">Miriam Smith</h4>
                     <p class="text-sm text-gray-500">Nigeria</p>
@@ -135,26 +138,51 @@
                 <a href="./editprofile.html" class="text-sm text-brand text-right">Edit</a>
                 <p class="text-sm mt-5">Full Name</p>
                 <p class="text-sm mt-5 text-right">Miriam SMith</p>
-                <p class="text-sm mt-2">Email</p>
-                <p class="text-sm mt-2 text-right">example@email.com</p>
-                <p class="text-sm mt-2">Phone</p>
-                <p class="text-sm mt-2 text-right">08028276612</p>
-                <p class="text-sm mt-2">Country</p>
-                <p class="text-sm mt-2 text-right">Nigeria</p>
-                <p class="text-sm mt-2">City</p>
-                <p class="text-sm mt-2 text-right">Lagos</p>
+                <p class="text-sm mt-4">Email</p>
+                <p class="text-sm mt-4 text-right">example@email.com</p>
+                <p class="text-sm mt-4">Phone</p>
+                <p class="text-sm mt-4 text-right">08028276612</p>
+                <p class="text-sm mt-4">Country</p>
+                <p class="text-sm mt-4 text-right">Nigeria</p>
+                <p class="text-sm mt-4">City</p>
+                <p class="text-sm mt-4 text-right">Lagos</p>
             </div>
-            <div style="background-color: #DDFFD1;" class="grid grid-cols-2 rounded shadow-sm p-3 m-3 md:m-5 max-width-400 ">
+            <!-- <div style="background-color: #DDFFD1;" class="grid grid-cols-2 rounded shadow-sm p-3 m-3 md:m-5 max-width-400 ">
                 <p class="text-sm">Withdrawal Information</p>
                 <p class="text-sm text-brand text-right">Edit</p>
                 <p class="text-sm mt-5">Wallet Address</p>
                 <p class="text-sm mt-5 text-right">TDM3938DN893N8</p>
                 <p class="text-sm mt-2">WithDrawal PIN</p>
                 <p class="text-sm mt-2 text-right">1234</p>
-            </div>
+            </div> -->
         </div>
         <!-- end of main  -->
     </div>
+    <script>
+        const file = document.getElementById("profile_pic")
+        let path = ""
+        
+        let choosePic = ()=>{
+            file.click()
+        }
+        
+        function onFileSelected(event) {
+            var selectedFile = event.target.files[0];
+            var reader = new FileReader();
+            
+            const imgtag = document.getElementById("dp")
+            imgtag.title = selectedFile.name;
+
+            reader.onload = function (event) {
+                imgtag.src = event.target.result;
+                path = event.target.result; // this is the new source, can be saved in the database
+            };
+
+            reader.readAsDataURL(selectedFile);
+        }
+        
+        
+    </script>
 </body>
 
 </html>
