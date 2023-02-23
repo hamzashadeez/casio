@@ -22,6 +22,10 @@
         .p10{
             font-size: 11px;
         }
+
+        .cardbg:nth-child(n+4) {
+            display:none;
+            }
     </style>
     <script src="../js/mobile-sidebar.js"></script>
 
@@ -29,9 +33,9 @@
 
 <body class="overflow-x-hidden">
     <div id="body"></div>
-    <div class="bg-white  h-screen flex flex-row w-full">
+    <div class="bg-white  h-screen flex relative flex-row justify-end w-full">
         <!-- side bar -->
-        <div class="hidden md:flex flex-col w-1/5 h-full bg-brand py-5">
+        <div class="hidden fixed top-0 left-0 md:flex flex-col w-1/5 h-full bg-brand py-5">
             <main class="w-full h-full sticky top-0 left-0">
             <img src="../img/casio.svg" class="w-3/4 mx-auto" alt="" srcset="">
             <div class="bg-whi h-full mt-3">
@@ -102,9 +106,9 @@
         </div>
         <!-- end of side bar -->
         <!-- main -->
-        <div class="w-full md:w-4/5 h-full relative">
+        <div class="w-full  md:w-4/5 h-full ">
             <!-- mobile header -->
-            <div class="h-14 sticky top-0 left-0 shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
+            <div class="h-14  shadow-md bg-brand w-full px-3 flex md:hidden items-center justify-between">
                 <button id="mecnu" onclick="render(document.getElementById(`body`))">
                     <img id="icon" src="../img/hambergermenu.png" class="w-8 h-8 z-50" alt="" srcset="">
                 </button>
@@ -134,10 +138,556 @@
                 </div>
                 <div class="px-3 md:px-5  flex items-center mt-10 justify-between">
                     <h2 class="font-medium text-sm text-gray-700">Monday, 12 February 2023</h2>
-                    <a class="text-brand text-sm font-medium" href="#">View All</a>
+                    <button id="viewAll" class="text-brand text-sm font-medium" href="#">View All</button>
                 </div>
                 <div class="px-3 md:px-5 mt-3">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">16</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">25</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">17</div>
+                                        <div class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="w-full h-44 cardbg">
                             <div class="flex h-1/2 p-3 gap-4">
                                 <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
@@ -327,6 +877,720 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full  h-44 cardbg">
+                            <div class="flex h-1/2 p-3 gap-4">
+                                <img class="h-full" src="../img/poke2.svg" alt="" srcset="">
+                                <div class="h-full flex flex-col justify-center">
+                                    <h5 class="text-xs font-semibold mb-1">Minute Lottery Ticket</h5>
+                                    <p style="font-size: 10px;" class=" text-gray-500">Draw took place on</p>
+                                    <p style="font-size: 10px;" class="">Monday May 12th, 2023</p>
+                                </div>
+                            </div>
+                            <hr class="mx-4 border-gray-300">
+                            <div class="h-1/2  flex flew-row items-center px-4 divide-x">
+                                <div class="w-3/5">
+                                    <p class="text-sm mb-2">Winning Numbers</p>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            16</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            25</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            17</div>
+                                        <div
+                                            class="w-6 h-6 p10 rounded-full flex items-center justify-center text-white font-semibold bg-brand">
+                                            5</div>
+                                    </div>
+                                </div>
+                                <div class="w-2/5 px-3">
+                                    <p class="text-xs text-gray-400 mb-2">Jack Post</p>
+                                    <p class="text-brand font-semibold text-2xl">$12,000</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -335,11 +1599,27 @@
     </div>
     <script>
         const draws = document.querySelectorAll(".cardbg")
-        console.log(draws)
+        const button = document.getElementById("viewAll");
+        let viewed = false;
         draws.forEach((d) => {
             d.addEventListener("click", () => {
                 window.location.href = './game.html'
             })
+        })
+        button.addEventListener("click", ()=>{
+            if(viewed === false){
+                draws.forEach((d) => {
+                    d.style.display = 'block'
+                })
+                viewed = true;
+            }else{
+                viewed = false;
+                draws.forEach((d, index) => {
+                    if(index > 2){
+                        d.style.display = 'none'
+                    }
+                })
+            }
         })
     </script>
 </body>
