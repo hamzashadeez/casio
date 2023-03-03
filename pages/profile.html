@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/tailwind.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -15,16 +16,34 @@
         .active {
             background-color: #27491A80 !important;
         }
+        .bg-green{
+
+            background-color: #DDFFD1;
+        }
+
+        .slide{
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        .point{
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            background-color: lightgray;
+        }
+        .active-point{
+            background-color: green !important;
+        }
     </style>
     <script src="../js/mobile-sidebar.js"></script>
 
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden relative">
     <div id="body"></div>
-    <div class="bg-white h-screen flex flex-row w-full">
+    <div class="bg-white h-screen flex flex-row w-full justify-end">
         <!-- side bar -->
-        <div class="hidden md:flex flex-col w-1/5 h-full bg-brand py-5">
+        <div class="hidden fixed top-0 left-0 md:flex flex-col w-1/5 h-full bg-brand py-5">
             <img src="../img/casio.svg" class="w-3/4 mx-auto" alt="" srcset="">
             <div class="bg-whi h-full mt-3">
                 <a href="./home.html">
@@ -118,11 +137,11 @@
                     </a>
                 </div>
             </div>
-            <div class="flex w-full items-center justify-between px-3 md:px-5 my-3 md:my-6">
+            <div class="flex w-full items-center justify-between px-3 md:px-5 mt-3 mb-1 md:my-2">
                 <h2 class="text-lg md:text-xl font-semibold ">My Profile</h2>
             </div>
             
-            <div onclick="choosePic()" class="p-3 cursor-pointer max-width-400  md:p-5 flex items-center mt-10 mb-4 ">
+            <div onclick="choosePic()" class="p-3 cursor-pointer max-width-400  md:p-5 flex items-center mt-3 mb-2 ">
                 <!-- class="w-30 h-30" -->
                 <img style="width: 100px;height: 100px; border-radius: 50%;" src="../img/5.png" id="dp" alt="profile"  srcset="">
                 <!-- get the selected picture from this input below -->
@@ -147,18 +166,105 @@
                 <p class="text-sm mt-4">City</p>
                 <p class="text-sm mt-4 text-right">Lagos</p>
             </div>
-            <!-- <div style="background-color: #DDFFD1;" class="grid grid-cols-2 rounded shadow-sm p-3 m-3 md:m-5 max-width-400 ">
-                <p class="text-sm">Withdrawal Information</p>
-                <p class="text-sm text-brand text-right">Edit</p>
-                <p class="text-sm mt-5">Wallet Address</p>
-                <p class="text-sm mt-5 text-right">TDM3938DN893N8</p>
-                <p class="text-sm mt-2">WithDrawal PIN</p>
-                <p class="text-sm mt-2 text-right">1234</p>
-            </div> -->
+
+            <div  class="mx-3 md:mx-5 max-width-400">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper mb-6">
+                    <div class="swiper-slide slide bg-white">
+                        <div class="bg-green p-3 rounded-md">
+                            <h4>Tier0 (current limit)</h4>
+                            <div class="grid grid-cols-2">
+                                <p class="text-sm mt-4 text-gray-700">Subscription</p>
+                                <p class="text-sm mt-4 text-brand text-right">$50</p>
+                                <p class="text-sm mt-4 text-gray-700">Percentage</p>
+                                <p class="text-sm mt-4 text-brand text-right">5%</p>
+                                <p class="text-sm mt-4 text-gray-900">See all ties</p>
+                                <div class="flex justify-end items-end"><i class="fa-solid fa-chevron-right text-center text-brand"></i></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 py-2 justify-center">
+                            <div class="point active-point"></div>
+                            <div class="point"></div>
+                            <div class="point"></div>
+                            <div class="point"></div>
+                        </div>
+                        <a href="./upgrade.html">
+                            <div class="bg-brand w-full text-sm text-white rounded-full py-2 mt-2 text-center">Upgrade to tier 1</div></a>
+                    </div>
+                    <div class="swiper-slide slide bg-white">
+                        <div class="bg-green p-3 rounded-md">
+                            <h4>Tier 1</h4>
+                            <div class="grid grid-cols-2">
+                                <p class="text-sm mt-4 text-gray-700">Subscription</p>
+                                <p class="text-sm mt-4 text-brand text-right">$50</p>
+                                <p class="text-sm mt-4 text-gray-700">Percentage</p>
+                                <p class="text-sm mt-4 text-brand text-right">5%</p>
+                                <p class="text-sm mt-4 text-gray-900">See all ties</p>
+                                <div class="flex justify-end items-end"><i class="fa-solid fa-chevron-right text-center text-brand"></i></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 py-2 justify-center">
+                            <div class="point"></div>
+                            <div class="point active-point"></div>
+                            <div class="point"></div>
+                            <div class="point"></div>
+                        </div>
+                        <a href="./upgrade.html">
+                            <div class="bg-brand w-full text-sm text-white rounded-full py-2 mt-2 text-center">Upgrade to tier 2</div></a>
+                    </div>
+                    <div class="swiper-slide slide bg-white">
+                        <div class="bg-green p-3 rounded-md">
+                            <h4>Tier 2 </h4>
+                            <div class="grid grid-cols-2">
+                                <p class="text-sm mt-4 text-gray-700">Subscription</p>
+                                <p class="text-sm mt-4 text-brand text-right">$50</p>
+                                <p class="text-sm mt-4 text-gray-700">Percentage</p>
+                                <p class="text-sm mt-4 text-brand text-right">5%</p>
+                                <p class="text-sm mt-4 text-gray-900">See all ties</p>
+                                <div class="flex justify-end items-end"><i class="fa-solid fa-chevron-right text-center text-brand"></i></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 py-2 justify-center">
+                            <div class="point"></div>
+                            <div class="point"></div>
+                            <div class="point active-point"></div>
+                            <div class="point"></div>
+                        </div>
+                        <a href="./upgrade.html">
+                            <div class="bg-brand w-full text-sm text-white rounded-full py-2 mt-2 text-center">Upgrade to tier 3</div></a>
+                    </div>
+                    <div class="swiper-slide slide bg-white">
+                        <div class="bg-green p-3 rounded-md">
+                            <h4>Tier 3 </h4>
+                            <div class="grid grid-cols-2">
+                                <p class="text-sm mt-4 text-gray-700">Subscription</p>
+                                <p class="text-sm mt-4 text-brand text-right">$50</p>
+                                <p class="text-sm mt-4 text-gray-700">Percentage</p>
+                                <p class="text-sm mt-4 text-brand text-right">5%</p>
+                                <p class="text-sm mt-4 text-gray-900">See all ties</p>
+                                <div class="flex justify-end items-end"><i class="fa-solid fa-chevron-right text-center text-brand"></i></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 py-2 justify-center">
+                            <div class="point "></div>
+                            <div class="point"></div>
+                            <div class="point"></div>
+                            <div class="point active-point"></div>
+                        </div>
+                        <a href="./upgrade.html">
+                            <div class="bg-brand w-full text-sm text-white rounded-full py-2 mt-2 text-center">Upgrade to tier 4</div></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
         </div>
         <!-- end of main  -->
     </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
+        //  Initialize Swiper
+            let swiper = new Swiper(".mySwiper", {});
         const file = document.getElementById("profile_pic")
         let path = ""
         
